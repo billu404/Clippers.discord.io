@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CLIPPERS • Official Discord</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+    --bg: linear-gradient(135deg, #0f2027, #2c5364, #00c6ff);
+    --card: rgba(255,255,255,0.12);
+    --text: #ffffff;
+}
+
+.light {
+    --bg: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+    --card: rgba(0,0,0,0.08);
+    --text: #000000;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    transition: 0.4s ease;
+}
+
+/* TOGGLE */
+.toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: var(--card);
+    padding: 10px 18px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    backdrop-filter: blur(10px);
+}
+
+/* HERO */
+header {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px;
+}
+
+.hero {
+    max-width: 900px;
+    animation: fadeIn 1.4s ease;
+}
+
+.logo {
+    font-size: 3.5rem;
+    font-weight: 700;
+    letter-spacing: 6px;
+    margin-bottom: 10px;
+}
+
+.tagline {
+    color: #7dd3ff;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 35px;
+}
+
+.btn {
+    padding: 15px 42px;
+    border-radius: 50px;
+    background: linear-gradient(135deg, #00c6ff, #0072ff);
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(0,198,255,0.6);
+}
+
+/* SECTIONS */
+section {
+    padding: 90px 10%;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.4rem;
+    margin-bottom: 60px;
+}
+
+/* FEATURES */
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
+    gap: 35px;
+}
+
+.feature {
+    background: var(--card);
+    padding: 35px;
+    border-radius: 22px;
+    backdrop-filter: blur(10px);
+    transition: 0.4s ease;
+    animation: slideUp 1s ease;
+}
+
+.feature:hover {
+    transform: translateY(-12px) scale(1.03);
+}
+
+/* JOIN */
+.join {
+    text-align: center;
+    background: var(--card);
+    border-radius: 30px;
+    padding: 70px 40px;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 30px;
+    opacity: 0.8;
+    font-size: 0.9rem;
+}
+
+/* ANIMATIONS */
+@keyframes fadeIn {
+    from {opacity:0; transform:translateY(25px);}
+    to {opacity:1; transform:translateY(0);}
+}
+
+@keyframes slideUp {
+    from {opacity:0; transform:translateY(40px);}
+    to {opacity:1; transform:translateY(0);}
+}
+</style>
+</head>
+
+<body>
+
+<div class="toggle" onclick="toggleMode()">🌙 / ☀️</div>
+
+<header>
+    <div class="hero">
+        <div class="logo">CLIPPERS</div>
+        <div class="tagline">OFFICIAL DISCORD</div>
+        <p>A chill, active, and welcoming community built for everyone.</p>
+        <a class="btn" href="https://discord.gg/Jef5BXuPA" target="_blank">Join CLIPPERS</a>
+    </div>
+</header>
+
+<section>
+    <h2 class="section-title">Why CLIPPERS?</h2>
+    <div class="features">
+        <div class="feature">
+            <h3>💬 Friendly Community</h3>
+            <p>Meet new people and vibe daily.</p>
+        </div>
+        <div class="feature">
+            <h3>🎮 Events & Fun</h3>
+            <p>Games, events, and giveaways.</p>
+        </div>
+        <div class="feature">
+            <h3>🛡️ Safe Space</h3>
+            <p>Moderated & respectful environment.</p>
+        </div>
+        <div class="feature">
+            <h3>🌍 Everyone Welcome</h3>
+            <p>No limits, just vibes.</p>
+        </div>
+    </div>
+</section>
+
+<section class="join">
+    <h2 class="section-title">Ready to Join CLIPPERS?</h2>
+    <p>Click below and become part of the community.</p><br><br>
+    <a class="btn" href="https://discord.gg/Jef5BXuPA" target="_blank">Join Now</a>
+</section>
+
+<footer>
+    © 2026 • CLIPPERS • Not affiliated with Discord Inc.
+</footer>
+
+<script>
+function toggleMode() {
+    document.body.classList.toggle("light");
+}
+</script>
+
+</body>
+</html>
